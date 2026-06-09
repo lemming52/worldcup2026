@@ -65,14 +65,15 @@ class SimulationResults:
 
 
 class GroupStageSimulator:
-    def __init__(self, predictor: MatchPredictor, n: int = 10_000, seed: int | None = None):
+    def __init__(self, predictor: object, n: int = 10_000, seed: int | None = None):
         self.predictor = predictor
         self.n = n
         self.rng = np.random.default_rng(seed)
+        self._use_poisson = hasattr(predictor, "lambdas")
 
     def run(self, groups: dict[str, list[Team]]) -> SimulationResults:
         results = SimulationResults(
-            predictor_name=self.predictor.name,
+            predictor_name=self.predictor.name,  # type: ignore[union-attr]
             n_simulations=self.n,
         )
 
@@ -105,14 +106,21 @@ class GroupStageSimulator:
         match_results: list[tuple[Team, Team, MatchOutcome]] = []
 
         for home, away in match_pairs:
-            probs = self.predictor.predict(home, away)
-            outcome_str: Outcome = self.rng.choice(
-                ["home", "draw", "away"], p=list(probs)  # type: ignore[arg-type]
-            )
-            home_goals, away_goals = _simulate_goals(outcome_str, self.rng)
-            match_results.append((home, away, MatchOutcome(home_goals, away_goals)))
+            outcome = self._sample_match(home, away)
+            match_results.append((home, away, outcome))
 
         return compute_standings(teams, match_results)
+
+    def _sample_match(self, home: Team, away: Team) -> MatchOutcome:
+        if self._use_poisson:
+            λ_h, λ_a = self.predictor.lambdas(home, away)  # type: ignore[union-attr]
+            return MatchOutcome(int(self.rng.poisson(λ_h)), int(self.rng.poisson(λ_a)))
+        probs = self.predictor.predict(home, away)  # type: ignore[union-attr]
+        outcome_str: Outcome = self.rng.choice(
+            ["home", "draw", "away"], p=list(probs)  # type: ignore[arg-type]
+        )
+        home_goals, away_goals = _simulate_goals(outcome_str, self.rng)
+        return MatchOutcome(home_goals, away_goals)
 
 
 def _simulate_goals(outcome: Outcome, rng: np.random.Generator) -> tuple[int, int]:
