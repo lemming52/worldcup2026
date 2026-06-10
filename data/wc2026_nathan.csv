@@ -1,49 +1,49 @@
-team,group,fifa_ranking,equality_index,nathan_score
-France,I,1,74,0.63
-Senegal,I,14,4,0.6136
-Morocco,C,8,13,0.6118
-Iran,G,21,5,0.5841
-Egypt,G,29,10,0.5428
-Algeria,J,28,13,0.5295
-Qatar,B,55,8,0.5274
-Tunisia,F,44,14,0.5054
-Iraq,I,57,13,0.5012
-Saudi Arabia,H,61,13,0.499
-Ghana,L,74,15,0.4831
-Jordan,J,63,17,0.478
-Uzbekistan,K,50,20,0.4707
-Ivory Coast,E,34,23,0.4707
-Congo DR,K,46,21,0.4687
-Türkiye,D,22,32,0.4466
-Spain,H,2,83,0.4386
-Argentina,J,3,74,0.4187
-Haiti,C,83,28,0.4149
-England,L,4,68,0.41
-Paraguay,D,40,34,0.4091
-Panama,L,33,39,0.392
-South Korea,A,25,46,0.37
-Croatia,L,11,57,0.3658
-Japan,F,18,53,0.3529
-Portugal,K,5,77,0.3386
-Brazil,C,6,75,0.3291
-Bosnia-Herzegovina,B,65,50,0.312
-Netherlands,F,7,76,0.309
-United States,D,16,68,0.285
-Colombia,K,13,71,0.2837
-Ecuador,E,23,65,0.2793
-Belgium,G,9,78,0.2767
-Mexico,A,15,71,0.2741
-Switzerland,B,19,70,0.2647
-Germany,E,10,80,0.2581
-Austria,J,24,73,0.2371
-Scotland,C,43,68,0.2362
-South Africa,A,60,67,0.2295
-Cape Verde,H,69,68,0.2202
-Czechia,A,41,72,0.2181
-Australia,D,27,78,0.2062
-Sweden,F,38,75,0.2061
-Canada,B,30,78,0.2013
-Uruguay,H,17,87,0.1863
-Curaçao,E,82,76,0.1752
-Norway,I,31,88,0.1498
-New Zealand,G,85,81,0.1492
+team,group,fifa_ranking,fifa_points,equality_index,nathan_score
+Senegal,I,15,1684.07,4,0.9288
+Iran,G,20,1619.58,5,0.9066
+Morocco,C,7,1755.1,13,0.9027
+Egypt,G,29,1562.37,10,0.8664
+Algeria,J,28,1571.03,13,0.8537
+Qatar,B,57,1450.31,8,0.8465
+Tunisia,F,45,1476.41,14,0.8235
+Iraq,I,56,1451.15,13,0.8217
+Saudi Arabia,H,61,1423.88,13,0.8145
+Ivory Coast,E,33,1540.87,23,0.7957
+Uzbekistan,K,50,1458.73,20,0.7888
+Congo DR,K,46,1474.43,21,0.7879
+Jordan,J,63,1387.74,17,0.7848
+Ghana,L,73,1346.88,15,0.784
+Türkiye,D,22,1605.73,32,0.7679
+Paraguay,D,41,1505.35,34,0.7312
+Panama,L,34,1539.16,39,0.7152
+Haiti,C,83,1293.1,28,0.7046
+South Korea,A,25,1591.63,46,0.6942
+Japan,F,18,1661.58,53,0.6778
+Croatia,L,11,1714.87,57,0.672
+England,L,4,1827.05,68,0.6469
+Argentina,J,1,1876.12,74,0.63
+France,I,3,1870.7,74,0.6286
+Bosnia-Herzegovina,B,64,1387.22,50,0.6197
+United States,D,17,1671.23,68,0.6054
+Ecuador,E,23,1598.52,65,0.601
+Colombia,K,13,1698.35,71,0.5976
+Brazil,C,6,1765.86,75,0.5956
+Mexico,A,14,1687.48,71,0.5947
+Switzerland,B,19,1650.06,70,0.5898
+Netherlands,F,8,1753.57,76,0.5873
+Portugal,K,5,1766.18,77,0.5857
+Spain,H,2,1874.71,83,0.5846
+Belgium,G,9,1742.24,78,0.5743
+Germany,E,10,1735.77,80,0.5626
+Scotland,C,42,1503.34,68,0.5607
+Austria,J,24,1597.4,73,0.5607
+South Africa,A,60,1428.38,67,0.5457
+Czechia,A,40,1505.74,72,0.5413
+Australia,D,27,1579.34,78,0.5309
+Sweden,F,38,1509.79,75,0.5274
+Canada,B,30,1559.48,78,0.5256
+Cape Verde,H,67,1371.11,68,0.5254
+Uruguay,H,16,1673.07,87,0.5109
+Norway,I,31,1557.44,88,0.4751
+Curaçao,E,82,1294.77,76,0.4651
+New Zealand,G,85,1275.58,81,0.435

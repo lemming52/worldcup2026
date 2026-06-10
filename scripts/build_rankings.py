@@ -100,99 +100,97 @@ FIFA_TO_CANONICAL: dict[str, str] = {
     "The Gambia":                   "Gambia",
 }
 
-# ── Full FIFA rankings (April 1, 2026 — 211 teams) ────────────────────────────
-FIFA_RANKINGS: list[tuple[int, str]] = [
-    (1, "France"), (2, "Spain"), (3, "Argentina"), (4, "England"),
-    (5, "Portugal"), (6, "Brazil"), (7, "Netherlands"), (8, "Morocco"),
-    (9, "Belgium"), (10, "Germany"), (11, "Croatia"), (12, "Italy"),
-    (13, "Colombia"), (14, "Senegal"), (15, "Mexico"), (16, "USA"),
-    (17, "Uruguay"), (18, "Japan"), (19, "Switzerland"), (20, "Denmark"),
-    (21, "IR Iran"), (22, "Turkey"), (23, "Ecuador"), (24, "Austria"),
-    (25, "Korea Republic"), (26, "Nigeria"), (27, "Australia"), (28, "Algeria"),
-    (29, "Egypt"), (30, "Canada"), (31, "Norway"), (32, "Ukraine"),
-    (33, "Panama"), (34, "Côte d'Ivoire"), (35, "Poland"), (36, "Russia"),
-    (37, "Wales"), (38, "Sweden"), (39, "Serbia"), (40, "Paraguay"),
-    (41, "Czechia"), (42, "Hungary"), (43, "Scotland"), (44, "Tunisia"),
-    (45, "Cameroon"), (46, "Congo DR"), (47, "Greece"), (48, "Slovakia"),
-    (49, "Venezuela"), (50, "Uzbekistan"), (51, "Costa Rica"), (52, "Mali"),
-    (53, "Peru"), (54, "Chile"), (55, "Qatar"), (56, "Romania"), (57, "Iraq"),
-    (58, "Slovenia"), (59, "Republic of Ireland"), (60, "South Africa"),
-    (61, "Saudi Arabia"), (62, "Burkina Faso"), (63, "Jordan"), (64, "Albania"),
-    (65, "Bosnia and Herzegovina"), (66, "Honduras"), (67, "North Macedonia"),
-    (68, "United Arab Emirates"), (69, "Cabo Verde"), (70, "Northern Ireland"),
-    (71, "Jamaica"), (72, "Georgia"), (73, "Finland"), (74, "Ghana"),
-    (75, "Iceland"), (76, "Bolivia"), (77, "Israel"), (78, "Kosovo"),
-    (79, "Oman"), (80, "Guinea"), (81, "Montenegro"), (82, "Curaçao"),
-    (83, "Haiti"), (84, "Syria"), (85, "New Zealand"), (86, "Bulgaria"),
-    (87, "Gabon"), (88, "Uganda"), (89, "Angola"), (90, "Benin"),
-    (91, "Bahrain"), (92, "Zambia"), (93, "Thailand"), (94, "China PR"),
-    (95, "Palestine"), (96, "Guatemala"), (97, "Belarus"), (98, "Luxembourg"),
-    (99, "Vietnam"), (100, "El Salvador"), (101, "Mozambique"),
-    (102, "Trinidad and Tobago"), (103, "Tajikistan"), (104, "Madagascar"),
-    (105, "Equatorial Guinea"), (106, "Armenia"), (107, "Kyrgyz Republic"),
-    (108, "Lebanon"), (109, "Comoros"), (110, "Kazakhstan"), (111, "Kenya"),
-    (112, "Libya"), (113, "Tanzania"), (114, "Niger"), (115, "Mauritania"),
-    (116, "The Gambia"), (117, "Sudan"), (118, "Korea DPR"), (119, "Sierra Leone"),
-    (120, "Namibia"), (121, "Togo"), (122, "Indonesia"), (123, "Faroe Islands"),
-    (124, "Azerbaijan"), (125, "Suriname"), (126, "Cyprus"), (127, "Malawi"),
-    (128, "Rwanda"), (129, "Estonia"), (130, "Zimbabwe"), (131, "Nicaragua"),
-    (132, "Guinea-Bissau"), (133, "Congo"), (134, "Kuwait"), (135, "Philippines"),
-    (136, "India"), (137, "Latvia"), (138, "Malaysia"), (139, "Central African Republic"),
-    (140, "Liberia"), (141, "Turkmenistan"), (142, "Burundi"),
-    (143, "Dominican Republic"), (144, "Ethiopia"), (145, "Lesotho"),
-    (146, "Botswana"), (147, "Singapore"), (148, "Lithuania"), (149, "Yemen"),
-    (150, "Guyana"), (151, "New Caledonia"), (152, "St Kitts and Nevis"),
-    (153, "Solomon Islands"), (154, "Fiji"), (155, "Hong Kong, China"),
-    (156, "Puerto Rico"), (157, "Tahiti"), (158, "Myanmar"), (159, "Moldova"),
-    (160, "Vanuatu"), (161, "Malta"), (162, "Antigua and Barbuda"), (163, "Grenada"),
-    (164, "Cuba"), (165, "Eswatini"), (166, "Bermuda"), (167, "St Lucia"),
-    (168, "Papua New Guinea"), (169, "Afghanistan"), (170, "South Sudan"),
-    (171, "St Vincent and the Grenadines"), (172, "Maldives"), (173, "Andorra"),
-    (174, "Chinese Taipei"), (175, "Montserrat"), (176, "Nepal"), (177, "Cambodia"),
-    (178, "Mauritius"), (179, "Barbados"), (180, "Belize"), (181, "Bangladesh"),
-    (182, "Dominica"), (183, "Chad"), (184, "Eritrea"), (185, "Laos"),
-    (186, "Bhutan"), (187, "Mongolia"), (188, "Cook Islands"), (189, "Aruba"),
-    (190, "Samoa"), (191, "Sri Lanka"), (192, "American Samoa"),
-    (193, "Brunei Darussalam"), (194, "Macau"), (195, "Cayman Islands"),
-    (196, "São Tomé and Príncipe"), (197, "Djibouti"), (198, "Somalia"),
-    (199, "Tonga"), (200, "Timor-Leste"), (201, "Guam"), (202, "Pakistan"),
-    (203, "Gibraltar"), (204, "Seychelles"), (205, "Turks and Caicos Islands"),
-    (206, "Liechtenstein"), (207, "Bahamas"), (208, "British Virgin Islands"),
-    (209, "US Virgin Islands"), (210, "Anguilla"), (211, "San Marino"),
+# ── Live FIFA rankings (June 10, 2026 — 211 teams) — rank, name, elo points ───
+FIFA_RANKINGS: list[tuple[int, str, float]] = [
+    (1, "Argentina", 1876.12), (2, "Spain", 1874.71), (3, "France", 1870.70),
+    (4, "England", 1827.05), (5, "Portugal", 1766.18), (6, "Brazil", 1765.86),
+    (7, "Morocco", 1755.10), (8, "Netherlands", 1753.57), (9, "Belgium", 1742.24),
+    (10, "Germany", 1735.77), (11, "Croatia", 1714.87), (12, "Italy", 1704.73),
+    (13, "Colombia", 1698.35), (14, "Mexico", 1687.48), (15, "Senegal", 1684.07),
+    (16, "Uruguay", 1673.07), (17, "USA", 1671.23), (18, "Japan", 1661.58),
+    (19, "Switzerland", 1650.06), (20, "IR Iran", 1619.58), (21, "Denmark", 1619.47),
+    (22, "Türkiye", 1605.73), (23, "Ecuador", 1598.52), (24, "Austria", 1597.40),
+    (25, "Korea Republic", 1591.63), (26, "Nigeria", 1586.69), (27, "Australia", 1579.34),
+    (28, "Algeria", 1571.03), (29, "Egypt", 1562.37), (30, "Canada", 1559.48),
+    (31, "Norway", 1557.44), (32, "Ukraine", 1549.29), (33, "Côte d'Ivoire", 1540.87),
+    (34, "Panama", 1539.16), (35, "Russia", 1529.60), (36, "Poland", 1526.18),
+    (37, "Wales", 1516.95), (38, "Sweden", 1509.79), (39, "Hungary", 1506.39),
+    (40, "Czechia", 1505.74), (41, "Paraguay", 1505.35), (42, "Scotland", 1503.34),
+    (43, "Serbia", 1502.13), (44, "Cameroon", 1481.24), (45, "Tunisia", 1476.41),
+    (46, "Congo DR", 1474.43), (47, "Slovakia", 1473.66), (48, "Greece", 1473.19),
+    (49, "Venezuela", 1464.30), (50, "Uzbekistan", 1458.73), (51, "Chile", 1458.20),
+    (52, "Peru", 1457.69), (53, "Costa Rica", 1457.00), (54, "Romania", 1455.89),
+    (55, "Mali", 1455.59), (56, "Iraq", 1451.15), (57, "Qatar", 1450.31),
+    (58, "Republic of Ireland", 1441.10), (59, "Slovenia", 1441.09),
+    (60, "South Africa", 1428.38), (61, "Saudi Arabia", 1423.88),
+    (62, "Burkina Faso", 1406.99), (63, "Jordan", 1387.74),
+    (64, "Bosnia and Herzegovina", 1387.22), (65, "Honduras", 1378.97),
+    (66, "Albania", 1376.03), (67, "Cabo Verde", 1371.11),
+    (68, "United Arab Emirates", 1370.47), (69, "North Macedonia", 1369.16),
+    (70, "Northern Ireland", 1365.30), (71, "Jamaica", 1357.84),
+    (72, "Georgia", 1355.26), (73, "Ghana", 1346.88), (74, "Iceland", 1343.92),
+    (75, "Finland", 1341.92), (76, "Israel", 1333.90), (77, "Bolivia", 1326.00),
+    (78, "Kosovo", 1319.12), (79, "Oman", 1306.90), (80, "Montenegro", 1301.98),
+    (81, "Guinea", 1295.60), (82, "Curaçao", 1294.77), (83, "Haiti", 1293.10),
+    (84, "Syria", 1283.05), (85, "New Zealand", 1275.58), (86, "Gabon", 1272.51),
+    (87, "Bulgaria", 1271.68), (88, "Angola", 1265.58), (89, "Uganda", 1264.09),
+    (90, "Zambia", 1255.82), (91, "China PR", 1254.81), (92, "Bahrain", 1254.41),
+    (93, "Benin", 1252.17), (94, "Thailand", 1250.80), (95, "Palestine", 1243.71),
+    (96, "Belarus", 1242.88), (97, "Guatemala", 1238.74), (98, "Luxembourg", 1232.82),
+    (99, "Vietnam", 1225.68), (100, "El Salvador", 1225.34), (101, "Tajikistan", 1224.19),
+    (102, "Trinidad and Tobago", 1219.59), (103, "Mozambique", 1218.62),
+    (104, "Madagascar", 1202.69), (105, "Equatorial Guinea", 1195.20),
+    (106, "Kyrgyz Republic", 1192.16), (107, "Armenia", 1189.63),
+    (108, "Comoros", 1187.91), (109, "Kenya", 1185.08), (110, "Libya", 1182.08),
+    (111, "Kazakhstan", 1180.78), (112, "Tanzania", 1180.27),
+    (113, "Mauritania", 1176.68), (114, "Niger", 1175.33), (115, "Lebanon", 1172.22),
+    (116, "The Gambia", 1159.64), (117, "Sudan", 1157.22), (118, "Indonesia", 1157.14),
+    (119, "Togo", 1152.76), (120, "Korea DPR", 1151.05), (121, "Namibia", 1148.84),
+    (122, "Sierra Leone", 1147.56), (123, "Faroe Islands", 1136.59),
+    (124, "Cyprus", 1133.25), (125, "Suriname", 1132.43), (126, "Azerbaijan", 1132.00),
+    (127, "Estonia", 1130.64), (128, "Rwanda", 1126.62), (129, "Malawi", 1122.05),
+    (130, "Zimbabwe", 1119.78), (131, "Nicaragua", 1114.63),
+    (132, "Guinea-Bissau", 1108.38), (133, "Kuwait", 1106.47), (134, "Congo", 1105.96),
+    (135, "Philippines", 1100.95), (136, "Malaysia", 1086.22), (137, "Latvia", 1085.66),
+    (138, "India", 1084.93), (139, "Central African Republic", 1080.82),
+    (140, "Liberia", 1080.44), (141, "Turkmenistan", 1078.65), (142, "Burundi", 1078.01),
+    (143, "Ethiopia", 1077.52), (144, "Dominican Republic", 1076.50),
+    (145, "Yemen", 1065.24), (146, "Lesotho", 1064.29), (147, "Botswana", 1063.63),
+    (148, "Singapore", 1057.95), (149, "Lithuania", 1056.85), (150, "Guyana", 1049.32),
+    (151, "New Caledonia", 1036.95), (152, "St Kitts and Nevis", 1036.33),
+    (153, "Solomon Islands", 1031.89), (154, "Puerto Rico", 1024.30),
+    (155, "Fiji", 1024.17), (156, "Hong Kong, China", 1024.16), (157, "Tahiti", 1019.04),
+    (158, "Myanmar", 1010.91), (159, "Moldova", 1008.24), (160, "Vanuatu", 1002.53),
+    (161, "Malta", 992.79), (162, "Antigua and Barbuda", 986.58), (163, "Grenada", 981.82),
+    (164, "Cuba", 981.42), (165, "Eswatini", 979.01), (166, "St Lucia", 976.71),
+    (167, "Bermuda", 975.05), (168, "Papua New Guinea", 974.90),
+    (169, "Afghanistan", 971.20), (170, "South Sudan", 970.94),
+    (171, "St Vincent and the Grenadines", 968.27), (172, "Andorra", 946.43),
+    (173, "Maldives", 943.92), (174, "Chinese Taipei", 923.78),
+    (175, "Cambodia", 922.32), (176, "Montserrat", 916.75), (177, "Nepal", 914.54),
+    (178, "Mauritius", 911.49), (179, "Barbados", 909.89), (180, "Belize", 907.00),
+    (181, "Bangladesh", 902.93), (182, "Dominica", 897.69), (183, "Chad", 896.85),
+    (184, "Eritrea", 887.06), (185, "Laos", 885.03), (186, "Cook Islands", 877.53),
+    (187, "Sri Lanka", 876.86), (188, "Samoa", 876.41), (189, "Aruba", 875.61),
+    (190, "Mongolia", 874.47), (191, "American Samoa", 871.61), (192, "Bhutan", 870.81),
+    (193, "Macau", 858.03), (194, "Brunei Darussalam", 857.73),
+    (195, "São Tomé and Príncipe", 855.44), (196, "Djibouti", 853.58),
+    (197, "Cayman Islands", 850.06), (198, "Somalia", 839.17), (199, "Pakistan", 837.15),
+    (200, "Tonga", 835.64), (201, "Timor-Leste", 831.00), (202, "Gibraltar", 820.26),
+    (203, "Guam", 819.54), (204, "Seychelles", 804.16),
+    (205, "Turks and Caicos Islands", 803.98), (206, "Liechtenstein", 797.70),
+    (207, "Bahamas", 786.82), (208, "US Virgin Islands", 779.76),
+    (209, "British Virgin Islands", 777.41), (210, "Anguilla", 760.25),
+    (211, "San Marino", 721.20),
 ]
 
 
-def fetch_fifa_rankings() -> list[tuple[int, str]] | None:
-    """Try to fetch live rankings from inside.fifa.com. Returns None on failure."""
-    try:
-        import urllib.request, json, re
-        url = "https://inside.fifa.com/fifa-world-ranking/men"
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            html = resp.read().decode("utf-8", errors="ignore")
-        # Look for embedded JSON ranking data (FIFA embeds __NEXT_DATA__ or similar)
-        match = re.search(r'"rankings"\s*:\s*(\[.*?\])', html, re.DOTALL)
-        if not match:
-            return None
-        data = json.loads(match.group(1))
-        return [(int(item["rank"]), item["name"]) for item in data]
-    except Exception:
-        return None
-
-
 def build() -> pd.DataFrame:
-    rankings = fetch_fifa_rankings()
-    if rankings:
-        print("Using live FIFA rankings from inside.fifa.com")
-    else:
-        print("Live fetch failed or page is JS-rendered — using hardcoded April 1, 2026 data")
-        rankings = FIFA_RANKINGS
-
+    print("Using hardcoded June 10, 2026 data from inside.fifa.com")
     rows = []
-    for rank, fifa_name in rankings:
+    for rank, fifa_name, points in FIFA_RANKINGS:
         canonical = FIFA_TO_CANONICAL.get(fifa_name, fifa_name)
 
-        # Resolve equality score: check overrides first, then canonical→equaldex map, then direct
         if canonical in EQUALITY_OVERRIDES:
             eq_key = EQUALITY_OVERRIDES[canonical]
         else:
@@ -203,7 +201,8 @@ def build() -> pd.DataFrame:
         rows.append({
             "country":        canonical,
             "fifa_ranking":   rank,
-            "equality_index": equality,  # None if not found
+            "fifa_points":    points,
+            "equality_index": equality,
         })
 
     return pd.DataFrame(rows)
