@@ -6,6 +6,7 @@ from worldcup.algorithms.poisson import PoissonGoalModel
 from worldcup.algorithms.nathan_rating import NathanRatingModel
 from worldcup.algorithms.seyon import SeyonPredictor
 from worldcup.algorithms.animaniacs import AnimaniacsRatingModel
+from worldcup.algorithms.womens_elo import WomensEloRatingModel
 
 REGISTRY: dict[str, object] = {
     "uniform":      UniformPredictor(),
@@ -14,6 +15,7 @@ REGISTRY: dict[str, object] = {
     "nathan":       PoissonGoalModel(NathanRatingModel()),
     "seyon":        SeyonPredictor(),
     "animaniacs":   PoissonGoalModel(AnimaniacsRatingModel()),
+    "womens_elo":   PoissonGoalModel(WomensEloRatingModel()),
 }
 
 __all__ = [
@@ -21,6 +23,6 @@ __all__ = [
     "UniformPredictor", "RankingPredictor",
     "FIFARatingModel", "PoissonGoalModel",
     "NathanRatingModel", "SeyonPredictor",
-    "AnimaniacsRatingModel",
+    "AnimaniacsRatingModel", "WomensEloRatingModel",
     "REGISTRY",
 ]

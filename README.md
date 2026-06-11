@@ -82,6 +82,7 @@ jupyter lab
 | `notebooks/model_comparison.ipynb` | Side-by-side model comparison + accuracy over time |
 | `predictions/uniform.ipynb` | Uniform baseline — algorithm explanation + predictions |
 | `predictions/poisson_fifa.ipynb` | Poisson FIFA rating model — goal distributions + predictions |
+| `predictions/womens_elo.ipynb` | Women's Elo rating model — goal distributions + predictions |
 
 ## Models
 
@@ -90,6 +91,7 @@ jupyter lab
 | `uniform` | `MatchPredictor` | Equal probability (1/3 each). Baseline. |
 | `ranking` | `MatchPredictor` | Logistic function on FIFA ranking difference. |
 | `poisson_fifa` | `PoissonGoalModel` | Independent Poisson goal distributions driven by FIFA rating ratio. |
+| `womens_elo` | `PoissonGoalModel` | Poisson goal distributions driven by each team's FIFA Women's World Ranking Elo (and its inverse). Qatar has no women's ranking and falls back to a low default. |
 
 ## Adding a new model
 
